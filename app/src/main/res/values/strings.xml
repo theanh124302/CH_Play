@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GooglePlayApp</string>
+    <string name="hint"><![CDATA[Search apps & ...]]></string>
+    <string name="category">Category</string>
+    <string name="name_app">Reddit</string>
+    <string name="star">4.1</string>
+</resources>

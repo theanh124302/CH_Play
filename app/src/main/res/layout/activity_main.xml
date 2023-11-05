@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/searchbox"
+                android:gravity="center_vertical|left"
+                android:scaleType="centerInside">
+
+                <ImageButton
+                    android:id="@+id/search_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/search_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/search_button" />
+
+                <TextView
+                    android:id="@+id/search_box"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/hint"
+                    android:scaleType="centerInside" />
+
+                <ImageButton
+                    android:id="@+id/voice_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="5dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/voice_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:src="@drawable/voice_button" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/bell_button"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="13dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/bell" />
+
+            <ImageButton
+                android:id="@+id/user_icon"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_user" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e3e1e0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listapp_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_recycler_view"
+            app:layout_constraintBottom_toTopOf="@+id/end_bar"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/end_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:layout_width="125dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_gamse" />
+
+        <ImageButton
+            android:layout_width="145dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_apps" />
+
+        <ImageButton
+            android:layout_width="125dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_book" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
